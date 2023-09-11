@@ -341,3 +341,46 @@ h1 {
   color: #898989;
   cursor: pointer;
 }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 455px;
+}
+.footer__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  
+}
+.footer__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 250px;
+  
+}
+.footer__inner {
+  padding-top: 115px;
+}
+.footer h4 {
+  width: 174px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 33px;
+  text-align: left;
+  color: #ffffff;
+}
+.footer__link{
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  text-align: left;
+  color: #f88419;
+  width: 160px;
+  text-decoration: none;
+  cursor: pointer;
+}
