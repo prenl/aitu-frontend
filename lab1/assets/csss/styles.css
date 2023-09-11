@@ -66,6 +66,25 @@ h1 {
   transition: 0.2s linear color;
 }
 
+.nav__link.active {
+  position: relative;
+  color: #f88419;
+}
+
+.nav__link.active:hover {
+  color: #f88419;
+}
+
+.nav__link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #f88419;
+}
+
 .nav__link:hover {
   color: #ccc;
 }
@@ -79,7 +98,6 @@ h1 {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-
 }
 
 .wrapper__left {
@@ -95,7 +113,7 @@ h1 {
 }
 
 .promotion h1 {
-  color: #FFF;
+  color: #fff;
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
@@ -103,7 +121,7 @@ h1 {
 }
 
 .promotion h3 {
-  color: #DCDCDC;
+  color: #dcdcdc;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -112,16 +130,16 @@ h1 {
 
 .promotion__btn {
   padding: 18px 47px;
-  background-color: #F88419;
+  background-color: #f88419;
   border-radius: 4px;
 
-  color: #FFF;
+  color: #fff;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 
-  transition: .1s linear;
+  transition: 0.1s linear;
 
   cursor: pointer;
 }
@@ -136,7 +154,7 @@ h1 {
   height: 522px;
   flex-shrink: 0;
   transform: scale(-1, 1);
-  object-fit:cover;
+  object-fit: cover;
 }
 
 .gsx__stick {
@@ -156,13 +174,13 @@ h1 {
   top: -270px;
 
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 
-  transition: .1s linear color;
+  transition: 0.1s linear color;
 }
 
 .gsx__buy:hover {
@@ -174,7 +192,7 @@ h1 {
   left: 540px;
   top: -240px;
 
-  color: #F88419;
+  color: #f88419;
   font-size: 29px;
   font-style: normal;
   font-weight: 700;
@@ -186,7 +204,7 @@ h1 {
   left: 300px;
   top: -500px;
 
-  color: #FFF;
+  color: #fff;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -198,18 +216,17 @@ h1 {
   left: 300px;
   top: -520px;
 
-  color: #DCDCDC;
+  color: #dcdcdc;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
-
 .advertisment {
   width: 100%;
   height: 549px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .advertisment__inner {
@@ -242,7 +259,7 @@ h1 {
 }
 
 .advertisment p {
-  color: #0A1B2D;
+  color: #0a1b2d;
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
@@ -250,7 +267,7 @@ h1 {
 }
 
 .advertisment i {
-  color: #F88419;
+  color: #f88419;
 }
 
 .advertisment__img {
@@ -296,12 +313,12 @@ h1 {
 
   border-radius: 8px;
   cursor: pointer;
-  transition: .2s linear;
+  transition: 0.2s linear;
   z-index: 1;
 }
 
 .yourstyle__item:hover img {
-  transform: scale(1.1); 
+  transform: scale(1.1);
   opacity: 0.9;
 }
 
@@ -311,13 +328,13 @@ h1 {
   z-index: 2;
   text-decoration: none;
 
-  color: #0A1B2D;
+  color: #0a1b2d;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
 
-  transition: .1s linear;
+  transition: 0.1s linear;
 }
 
 .yourstyle__item:hover a {
