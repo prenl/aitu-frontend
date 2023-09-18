@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,19 +18,19 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/csss/styles.css" />
-    <title>Products - Motosmi.id</title>
+    <link rel="stylesheet" href="../assets/csss/styles.css" />
+    <title>FAQs - Motosmi.id</title>
   </head>
-  <body class="bgcolor-075">
+  <body>
     <section class="w-100 bg-dark" style="padding-bottom: 10px">
       <nav class="py-2 border-bottom">
         <div class="container d-flex flex-wrap">
           <ul class="nav me-auto">
             <li class="nav-item">
-              <a href="index.html" class="nav-link link-light px-2 mr-3rem" aria-current="page">Home</a>
+              <a href="../index.html" class="nav-link link-light px-2 mr-3rem" aria-current="page">Home</a>
             </li>
             <li class="nav-item"><a href="/" class="nav-link link-light px-2 mr-3rem active">Products</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-light px-2 mr-3rem">FAQs</a></li>
+            <li class="nav-item"><a href="../faq/" class="nav-link link-light px-2 mr-3rem">FAQs</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-light px-2 mr-3rem">Contact us</a></li>
           </ul>
           <ul class="nav">
@@ -65,7 +65,7 @@
             class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-light text-decoration-none"
             style="margin-left: 8px"
           >
-            <img src="./assets/images/logo.png" style="width: 180px" />
+            <img src="../assets/images/logo.png" style="width: 180px" />
           </a>
           <form class="col-12 col-lg-auto mb-3 mb-lg-0">
             <input type="search" class="form-control" placeholder="Search..." aria-label="Search" />
@@ -74,52 +74,77 @@
       </header>
     </section>
 
-    <div class="d-flex justify-content-center align-items-center mt-5">
-      <h1 class="fs-1 fw-bold">Products</h1>
-    </div>
+    <section class="mt-5">
+      <div class="container">
+        <h3 class="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3>
+        <p class="text-center mb-5">Find the answers for the most frequently asked questions below</p>
 
-    <div class="container mt-3">
-      <div class="fw-bold fs-3">Brands</div>
-      <div class="d-flex align-items-start">
-        <button
-          class="btn btn-primary rounded me-2"
-          onclick="window.location.replace('http:\/\/127.0.0.1:65149/products.html?brand=Suzuki')"
-        >
-          Suzuki
-        </button>
-        <button
-          class="btn btn-primary rounded me-2"
-          onclick="window.location.replace('http:\/\/127.0.0.1:65149/products.html?brand=Kawasaki')"
-        >
-          Kawasaki
-        </button>
-        <button
-          class="btn btn-primary rounded me-2"
-          onclick="window.location.replace('http:\/\/127.0.0.1:65149/products.html?brand=Yamaha')"
-        >
-          Yamaha
-        </button>
-        <button
-          class="btn btn-primary rounded me-2"
-          onclick="window.location.replace('http:\/\/127.0.0.1:65149/products.html?brand=Honda')"
-        >
-          Honda
-        </button>
-        <button
-          class="btn btn-outline-primary rounded me-2"
-          onclick="window.location.replace('http:\/\/127.0.0.1:65149/products.html')"
-        >
-          Clear filters
-        </button>
-      </div>
-      <br />
-    </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
+            <h6 class="mb-3 text-primary fs-4">
+              <i class="far fa-paper-plane text-primary pe-2"></i>Is there any delivery?
+            </h6>
+            <p class="fs-6">
+              <strong>Absolutely!</strong> We work with top delivery companies such as DHL, FedEX and others. Contact us
+              to get more information and price plan for delivery.
+            </p>
+          </div>
 
-    <div class="container">
-      <div class="row" id="products">
-        <!-- My products from JS -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
+            <h6 class="mb-3 text-primary fs-4">
+              <i class="fas fa-pen-alt text-primary pe-2"></i>Do you offer a warranty?
+            </h6>
+            <p class="fs-6">
+              <strong>Yes</strong>, all of our motorcycles come with a manufacturer's warranty, which typically covers
+              any defects in materials or workmanship for a specified period.
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
+            <h6 class="mb-3 text-primary fs-4">
+              <i class="fas fa-user text-primary pe-2"></i>Can I test ride a motorcycle?
+            </h6>
+            <p class="fs-6">
+              <strong>Absolutely!</strong> We encourage customers to test ride before making a purchase to ensure they
+              are comfortable with their choice. However, you'll need to provide a valid motorcycle license, and we
+              might ask for a deposit.
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
+            <h6 class="mb-3 text-primary fs-4">
+              <i class="fas fa-rocket text-primary pe-2"></i>Do you offer financing options?
+            </h6>
+            <p class="fs-6">
+              Yes, we do offer financing options for qualified buyers. We work with multiple financing institutions to
+              provide our customers with competitive rates and flexible payment plans. Please speak with our finance
+              department to discuss your needs and get more information.
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
+            <h6 class="mb-3 text-primary fs-4">
+              <i class="fas fa-home text-primary pe-2"></i>Can I trade in my old motorcycle?
+            </h6>
+            <p class="fs-6">
+              <strong>Unfortunately no.</strong> We do not accept any trade-ins. But we do have refund in 14 days if new
+              motorcycle won't fit you.
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
+            <h6 class="mb-3 text-primary fs-4">
+              <i class="fas fa-book-open text-primary pe-2"></i>Do you carry accessories and parts?
+            </h6>
+            <p class="fs-6">
+              Yes, we have a wide range of accessories, apparel, and spare parts to cater to your motorcycle needs. If
+              there's something specific you're looking for and can't find it in our store, let us know, and we'll do
+              our best to order it for you.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
     <footer class="text-center text-lg-start bg-dark text-white">
       <section class="d-flex justify-content-center p-4 border-bottom">
@@ -141,7 +166,6 @@
           </a>
         </div>
       </section>
-
       <section>
         <div class="container text-center text-md-start mt-5">
           <div class="row mt-3">
@@ -158,22 +182,22 @@
 
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4 orange-text">Products</h6>
-              <p><a href="products.html?brand=suzuki" class="text-reset">Suzuki</a></p>
-              <p><a href="products.html?brand=kawasaki" class="text-reset">Kawasaki</a></p>
-              <p><a href="products.html?brand=honda" class="text-reset">Honda</a></p>
-              <p><a href="products.html?brand=yamaha" class="text-reset">Yamaha</a></p>
+              <p><a href="../products/index.html?brand=Suzuki" class="text-reset">Suzuki</a></p>
+              <p><a href="../products/index.html?brand=Kawasaki" class="text-reset">Kawasaki</a></p>
+              <p><a href="../products/index.html?brand=Honda" class="text-reset">Honda</a></p>
+              <p><a href="../products/index.html?brand=Yamaha" class="text-reset">Yamaha</a></p>
             </div>
 
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4 orange-text">Useful links</h6>
-              <p><a href="index.html" class="text-reset">Home</a></p>
-              <p><a href="products.html" class="text-reset">Products</a></p>
-              <p><a href="#!" class="text-reset">FAQs</a></p>
+              <p><a href="../" class="text-reset">Home</a></p>
+              <p><a href="../products/" class="text-reset">Products</a></p>
+              <p><a href="/" class="text-reset">FAQs</a></p>
               <p><a href="#!" class="text-reset">Contact us</a></p>
             </div>
 
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <h6 class="text-uppercase fw-bold mb-4 orange-text">Contact</h6>
+              <h6 class="text-uppercase fw-bold mb-4 orange-text">Contact us</h6>
               <p><i class="fa-solid me-3 text-secondary fa-warehouse"></i>Astana, 010017, Kazakhstan</p>
               <p id="email-footer" class="cursor-pointer" title="Click to copy">
                 <i class="fas fa-envelope me-3 text-secondary"></i>elnur.kazakhstan@gmail.com
@@ -195,16 +219,7 @@
       </div>
     </footer>
 
-    <button class="btn btn-primary btn-lg" id="scrollTopBtn" style="position: fixed; bottom: 10px; right: 10px">
-      ↑ On Top
-    </button>
-
-    <script src="./assets/js/product-gen.js"></script>
     <script src="https://kit.fontawesome.com/05d935ae9b.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./assets/js/top-button.js"></script>
-    <script>
-      parseBrands();
-    </script>
+    <script src="../assets/js/copy.js"></script>
   </body>
 </html>
