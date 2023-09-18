@@ -180,7 +180,7 @@ function parseBrands() {
         icon: "error",
         confirmButtonText: "Got it!",
       }).then((result) => {
-        window.location.replace(`http://127.0.0.1:51457/products`);
+        window.location.replace(`https://prenl.github.io/products`);
       });
     }
 
