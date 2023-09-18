@@ -1,4 +1,4 @@
-document.getElementById("phone1").addEventListener("click", function () {
+document.getElementById("phone1").addEventListener("click",  function () {
   const formattedPhone = "+77015130153";
 
   navigator.clipboard.writeText(formattedPhone).then(function () {
