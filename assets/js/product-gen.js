@@ -139,7 +139,7 @@ function generateProductHTML(product) {
                       .map(
                         (option) => `
                     <label class="btn btn-outline-secondary">
-                    <input type="radio" name="size" value="${option}" autocomplete="off" required> ${option}&nbsp;
+                    <input type="radio" name="size" value="${option}" autocomplete="off"  required> ${option}&nbsp;
                     </label>
                     `
                       )
