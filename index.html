@@ -1,346 +1,328 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/csss/styles.css" />
-    <title>Motosmi.id store</title>
-  </head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./assets/csss/styles.css" />
+        <title>Motosmi.id store</title>
+    </head>
 
-  <body>
-    <section class="master-bg w-100">
-      <nav class="py-2 border-bottom">
-        <div class="container d-flex flex-wrap">
-          <ul class="nav me-auto">
-            <li class="nav-item">
-              <a href="/" class="nav-link link-light px-2 mr-3rem active" aria-current="page">Home</a>
-            </li>
-            <li class="nav-item"><a href="products" class="nav-link link-light px-2 mr-3rem">Products</a></li>
-            <li class="nav-item"><a href="faq" class="nav-link link-light px-2 mr-3rem">FAQ</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-light px-1">Contact</a></li>
-          </ul>
-          <ul class="nav">
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light px-2">
-                <i class="fa-brands fa-threads fa-lg"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light px-2">
-                <i class="fa-brands fa-x-twitter fa-lg"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light px-2">
-                <i class="fa-brands fa-instagram fa-lg"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link link-light px-2">
-                <i class="fa-brands fa-youtube fa-lg"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <body>
+        <section class="master-bg w-100">
+            <nav class="py-2 border-bottom">
+                <div class="container d-flex flex-wrap">
+                    <ul class="nav me-auto">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link link-light px-2 mr-3rem active" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item"><a href="products" class="nav-link link-light px-2 mr-3rem">Products</a></li>
+                        <li class="nav-item"><a href="faq" class="nav-link link-light px-2 mr-3rem">FAQ</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link link-light px-1">Contact</a></li>
+                    </ul>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-light px-2">
+                                <i class="fa-brands fa-threads fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-light px-2">
+                                <i class="fa-brands fa-x-twitter fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-light px-2">
+                                <i class="fa-brands fa-instagram fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-light px-2">
+                                <i class="fa-brands fa-youtube fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-      <header class="py-3 mb-4">
-        <div class="container d-flex flex-wrap justify-content-center">
-          <a
-            href="/"
-            class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-light text-decoration-none"
-            style="margin-left: 8px"
-          >
-            <img src="./assets/images/logo.png" style="width: 180px" />
-          </a>
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0">
-            <input type="search" class="form-control" placeholder="Search..." aria-label="Search" />
-          </form>
-        </div>
-      </header>
+            <header class="py-3 mb-4">
+                <div class="container d-flex flex-wrap justify-content-center">
+                    <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-light text-decoration-none" style="margin-left: 8px">
+                        <img src="./assets/images/logo.png" style="width: 180px" />
+                    </a>
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0">
+                        <input type="search" class="form-control" placeholder="Search..." aria-label="Search" />
+                    </form>
+                </div>
+            </header>
 
-      <div class="overflow-hidden">
+            <div class="overflow-hidden">
+                <div class="container">
+                    <div class="pbt-100">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <h1 class="text-white fw-bold fs-4rem pb-2rem">THE POWERFUL PERFORMANCE WITH OPTIMIZED BALANCED</h1>
+                                <h3 class="color-dc fs-5 pb-2rem">
+                                    Motosmi goal is to provide the customer service and shopping experience that a person would expect from a truly customer-focused store.
+                                </h3>
+                                <form action="./products" method="get">
+                                    <button class="rounded text-white fs-6 btn fw-bold p18-p47 orange-color" id="shownow" type="submit">Shop now</button>
+                                </form>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <img src="./assets/images/gsx.png" class="gsx mt-5" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-100 bg-light">
+            <div class="container">
+                <div class="py-64px">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <img src="./assets/images/voge.png" alt="" class="w-100" />
+                        </div>
+                        <div class="col-12 col-md-6 mt-5">
+                            <h1 class="fs-1 fw-bold" style="padding-bottom: 40px">FIND YOUR NEXT COOL MOTORCYCLE</h1>
+                            <div class="row">
+                                <div class="col-6 d-flex align-items-center mb-5">
+                                    <i class="fa-solid fa-sack-dollar fa-2xl orange-text"></i>
+                                    <p class="mb-0 ms-2 fs-6 fw-bold">Friendly price</p>
+                                </div>
+                                <div class="col-6 d-flex align-items-center mb-5">
+                                    <i class="fa-solid fa-tag fa-2xl orange-text"></i>
+                                    <p class="mb-0 ms-2 fs-6 fw-bold">Lots of discounts</p>
+                                </div>
+                                <div class="col-6 d-flex align-items-center mb-5">
+                                    <i class="fa-solid fa-map fa-2xl orange-text"></i>
+                                    <p class="mb-0 ms-2 fs-6 fw-bold">Worldwide shipping</p>
+                                </div>
+                                <div class="col-6 d-flex align-items-center mb-5">
+                                    <i class="fa-solid fa-truck-fast fa-2xl orange-text"></i>
+                                    <p class="mb-0 ms-2 fs-6 fw-bold">Free shipping</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bgcolor-075 mb-5" id="yourstyle">
+            <div class="container">
+                <div class="py-64px text-center">
+                    <h1 class="fs-1 fw-bold">Choose Your Style</h1>
+
+                    <div class="container mt-4">
+                        <div class="row justify-content-around">
+                            <div class="col-12 col-sm-4 p-2">
+                                <div id="yourstyle-item">
+                                    <img src="./assets/images/diavel.png" class="w-100 rounded cursor-pointer transition-02" />
+                                    <div><a href="#" class="transition-02 fs-5 fw-bold">Street Naked</a></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4 p-2">
+                                <div id="yourstyle-item">
+                                    <img src="./assets/images/h2r.png" class="w-100 rounded cursor-pointer transition-02" />
+                                    <div><a href="#" class="transition-02 fs-5 fw-bold">Supersport</a></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-4 p-2">
+                                <div id="yourstyle-item">
+                                    <img src="./assets/images/vulcans.png" class="w-100 rounded cursor-pointer transition-02" />
+                                    <div><a href="#" class="transition-02 fs-5 fw-bold">Classic sport</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="container">
-          <div class="pbt-100">
-            <div class="row">
-              <div class="col-12 col-md-6">
-                <h1 class="text-white fw-bold fs-4rem pb-2rem">THE POWERFUL PERFORMANCE WITH OPTIMIZED BALANCED</h1>
-                <h3 class="color-dc fs-5 pb-2rem">
-                  Motosmi goal is to provide the customer service and shopping experience that a person would expect
-                  from a truly customer-focused store.
-                </h3>
-                <button class="rounded text-white fs-6 btn fw-bold p18-p47 orange-color" id="shownow">Shop now</button>
-              </div>
-              <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                <img src="./assets/images/gsx.png" class="gsx mt-5" alt="" />
-              </div>
+            <h1 class="text-align-center mt-5 text-center mb-3">Our branches</h1>
+            <br />
+
+            <div class="table-responsive w-75 mx-auto">
+                <table class="table table-bordered mb-5">
+                    <thead>
+                        <tr>
+                            <th scope="col">Store name</th>
+                            <th scope="col">Address & Location</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Motorsmi Alaska</td>
+                            <td>3801 Kidd av., George, AK, USA</td>
+                            <td><a href="tel:+12062440751">+1 (206) 244 0751</a></td>
+                            <td><button class="btn btn-danger">Closed until 2024</button></td>
+                        </tr>
+                        <tr>
+                            <td>হাজী ক্যাম্প</td>
+                            <td>৮৭ হাজী তলী, Bangladesh</td>
+                            <td><a href="+880755675318">+880 (755) 675 318</a></td>
+                            <td>
+                                <a href="https://maps.app.goo.gl/GkjLMX7BBntRLs4e9" target="_blank"><button class="btn btn-primary">View on map</button></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ұлттық дүкені</td>
+                            <td>Алматы, 5, Астана, Қазақстан</td>
+                            <td><a href="tel:+77015130153">+7 (701) 513 01 53</a></td>
+                            <td>
+                                <a href="https://maps.app.goo.gl/hW9rxjhF4m9aHEZy8" target="_blank"><button class="btn btn-primary">View on map</button></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Motorsmi MEGA Portland</td>
+                            <td>91 Arvid, Portland, CT, USA</td>
+                            <td><a href="tel:+15035170274">+1 (503) 517 0274</a></td>
+                            <td>
+                                <a href="https://maps.app.goo.gl/UPKc9eU8mNZB1vSm9" target="_blank"><button class="btn btn-primary">View on map</button></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
 
-    <section class="w-100 bg-light">
-      <div class="container">
-        <div class="py-64px">
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <img src="./assets/images/voge.png" alt="" class="w-100" />
+        <div class="pbt-100" style="background: linear-gradient(to bottom, #0f2344 0%, #5b92df 100%)">
+            <h1 class="text-center text-light fw-bold">Send us a message!</h1>
+            <h5 id="countdown" class="text-center my-3 text-light">Time left: <span id="timer"></span></h5>
+            <br />
+
+            <div class="container">
+                <div class="col-md-8 mx-auto">
+                    <div class="card" style="background-color: rgba(0, 0, 0, 0.1); border: 0">
+                        <div class="card-body rounded" style="padding: 30px">
+                            <form id="form" class="row g-3 text-light">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="name" required />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="surname" class="form-label">Last name</label>
+                                    <input type="text" class="form-control" id="surname" />
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required />
+                                </div>
+                                <div class="col-12">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input type="text" class="form-control" id="phone" required />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="wdyn" class="form-label">What do you need</label>
+                                    <input type="text" class="form-control" id="wdyn" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary w-100">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 mt-5">
-              <h1 class="fs-1 fw-bold" style="padding-bottom: 40px">FIND YOUR NEXT COOL MOTORCYCLE</h1>
-              <div class="row">
-                <div class="col-6 d-flex align-items-center mb-5">
-                  <i class="fa-solid fa-sack-dollar fa-2xl orange-text"></i>
-                  <p class="mb-0 ms-2 fs-6 fw-bold">Friendly price</p>
-                </div>
-                <div class="col-6 d-flex align-items-center mb-5">
-                  <i class="fa-solid fa-tag fa-2xl orange-text"></i>
-                  <p class="mb-0 ms-2 fs-6 fw-bold">Lots of discounts</p>
-                </div>
-                <div class="col-6 d-flex align-items-center mb-5">
-                  <i class="fa-solid fa-map fa-2xl orange-text"></i>
-                  <p class="mb-0 ms-2 fs-6 fw-bold">Worldwide shipping</p>
-                </div>
-                <div class="col-6 d-flex align-items-center mb-5">
-                  <i class="fa-solid fa-truck-fast fa-2xl orange-text"></i>
-                  <p class="mb-0 ms-2 fs-6 fw-bold">Free shipping</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
 
-    <section class="bgcolor-075 mb-5" id="yourstyle">
-      <div class="container">
-        <div class="py-64px text-center">
-          <h1 class="fs-1 fw-bold">Choose Your Style</h1>
+        <footer class="text-center text-lg-start bg-dark text-white">
+            <section class="d-flex justify-content-center p-4 border-bottom">
+                <div class="me-5 d-none d-lg-block">
+                    <span>Get connected with us on social networks:</span>
+                </div>
+                <div>
+                    <a href="" class="me-4 link-secondary">
+                        <i class="fa-brands fa-threads fa-lg"></i>
+                    </a>
+                    <a href="" class="me-4 link-secondary">
+                        <i class="fa-brands fa-x-twitter fa-lg"></i>
+                    </a>
+                    <a href="" class="me-4 link-secondary">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="" class="me-4 link-secondary">
+                        <i class="fa-brands fa-youtube fa-lg"></i>
+                    </a>
+                </div>
+            </section>
 
-          <div class="container mt-4">
-            <div class="row justify-content-around">
-              <div class="col-12 col-sm-4 p-2">
-                <div id="yourstyle-item">
-                  <img src="./assets/images/diavel.png" class="w-100 rounded cursor-pointer transition-02" />
-                  <div><a href="#" class="transition-02 fs-5 fw-bold">Street Naked</a></div>
+            <section>
+                <div class="container text-center text-md-start mt-5">
+                    <div class="row mt-3">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4 orange-text"><i class="fa-solid fa-motorcycle me-3 text-white"></i>Motosmi.id</h6>
+                            <p>
+                                Motosmi is your premium destination for top-tier motorcycle gear and accessories. Our carefully curated collection ensures quality and style for every rider. Shop with
+                                us and elevate your riding experience to the next level.
+                            </p>
+                        </div>
+
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4 orange-text">Products</h6>
+                            <p><a href="products/index.html?brand=Suzuki" class="text-reset">Suzuki</a></p>
+                            <p><a href="products/index.html?brand=Kawasaki" class="text-reset">Kawasaki</a></p>
+                            <p><a href="products/index.html?brand=Honda" class="text-reset">Honda</a></p>
+                            <p><a href="products/index.html?brand=Yamaha" class="text-reset">Yamaha</a></p>
+                        </div>
+
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4 orange-text">Useful links</h6>
+                            <p><a href="/" class="text-reset">Home</a></p>
+                            <p><a href="products" class="text-reset">Products</a></p>
+                            <p><a href="faq" class="text-reset">FAQ</a></p>
+                            <p><a href="#!" class="text-reset">Contact</a></p>
+                        </div>
+
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4 orange-text">Contact</h6>
+                            <p><i class="fa-solid me-3 text-secondary fa-warehouse"></i>Astana, 010017, Kazakhstan</p>
+                            <p id="email-footer" class="cursor-pointer" title="Click to copy"><i class="fas fa-envelope me-3 text-secondary"></i>elnur.kazakhstan@gmail.com</p>
+                            <p id="phone1" class="cursor-pointer" title="Click to copy"><i class="fas fa-phone me-3 text-secondary"></i>+7 (701) 513 01 53 | Yelnur, Founder</p>
+                            <p id="phone2" class="cursor-pointer" title="Click to copy"><i class="fas fa-print me-3 text-secondary"></i>+7 (702) 146 42 80 | Aslan, CEO</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-12 col-sm-4 p-2">
-                <div id="yourstyle-item">
-                  <img src="./assets/images/h2r.png" class="w-100 rounded cursor-pointer transition-02" />
-                  <div><a href="#" class="transition-02 fs-5 fw-bold">Supersport</a></div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-4 p-2">
-                <div id="yourstyle-item">
-                  <img src="./assets/images/vulcans.png" class="w-100 rounded cursor-pointer transition-02" />
-                  <div><a href="#" class="transition-02 fs-5 fw-bold">Classic sport</a></div>
-                </div>
-              </div>
+            </section>
+
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025)">
+                ©&nbsp;2023-2024&nbsp;Copyright&nbsp;|&nbsp;All rights reserved
+                <a class="text-reset fw-bold" href="https://prenl.github.io/">Motosmi.id</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </footer>
 
-    <div class="container">
-      <h1 class="text-align-center mt-5 text-center mb-3">Our branches</h1>
-      <br />
+        <button class="btn btn-primary btn-lg" id="scrollTopBtn" style="position: fixed; bottom: 10px; right: 10px">↑ On Top</button>
 
-      <div class="table-responsive w-75 mx-auto">
-        <table class="table table-bordered mb-5">
-          <thead>
-            <tr>
-              <th scope="col">Store name</th>
-              <th scope="col">Address & Location</th>
-              <th scope="col">Phone</th>
-              <th scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Motorsmi Alaska</td>
-              <td>3801 Kidd av., George, AK, USA</td>
-              <td><a href="tel:+12062440751">+1 (206) 244 0751</a></td>
-              <td><button class="btn btn-danger">Closed until 2024</button></td>
-            </tr>
-            <tr>
-              <td>হাজী ক্যাম্প</td>
-              <td>৮৭ হাজী তলী, Bangladesh</td>
-              <td><a href="+880755675318">+880 (755) 675 318</a></td>
-              <td>
-                <a href="https://maps.app.goo.gl/GkjLMX7BBntRLs4e9" target="_blank"
-                  ><button class="btn btn-primary">View on map</button></a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>Ұлттық дүкені</td>
-              <td>Алматы, 5, Астана, Қазақстан</td>
-              <td><a href="tel:+77015130153">+7 (701) 513 01 53</a></td>
-              <td>
-                <a href="https://maps.app.goo.gl/hW9rxjhF4m9aHEZy8" target="_blank"
-                  ><button class="btn btn-primary">View on map</button></a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>Motorsmi MEGA Portland</td>
-              <td>91 Arvid, Portland, CT, USA</td>
-              <td><a href="tel:+15035170274">+1 (503) 517 0274</a></td>
-              <td>
-                <a href="https://maps.app.goo.gl/UPKc9eU8mNZB1vSm9" target="_blank"
-                  ><button class="btn btn-primary">View on map</button></a
-                >
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="pbt-100" style="background: linear-gradient(to bottom, #0f2344 0%, #5b92df 100%)">
-      <h1 class="text-center mt-5 text-light fw-bold">Send us a message!</h1>
-      <br />
-
-      <div class="container">
-        <div class="col-md-8 mx-auto">
-          <div class="card" style="background-color: rgba(0, 0, 0, 0.1); border: 0">
-            <div class="card-body rounded" style="padding: 30px">
-              <form id="form" class="row g-3 text-light">
-                <div class="col-md-6">
-                  <label for="name" class="form-label">First name</label>
-                  <input type="text" class="form-control" id="name" required />
-                </div>
-                <div class="col-md-6">
-                  <label for="surname" class="form-label">Last name</label>
-                  <input type="text" class="form-control" id="surname" />
-                </div>
-                <div class="col-12">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" required />
-                </div>
-                <div class="col-12">
-                  <label for="phone" class="form-label">Phone</label>
-                  <input type="text" class="form-control" id="phone" required />
-                </div>
-                <div class="col-md-6">
-                  <label for="wdyn" class="form-label">What do you need</label>
-                  <input type="text" class="form-control" id="wdyn" />
-                </div>
-                <div class="col-md-6">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea class="form-control" id="message" required></textarea>
-                </div>
-                <div class="col-12 mt-4">
-                  <button type="submit" class="btn btn-primary w-100">Send</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer class="text-center text-lg-start bg-dark text-white">
-      <section class="d-flex justify-content-center p-4 border-bottom">
-        <div class="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
-        </div>
-        <div>
-          <a href="" class="me-4 link-secondary">
-            <i class="fa-brands fa-threads fa-lg"></i>
-          </a>
-          <a href="" class="me-4 link-secondary">
-            <i class="fa-brands fa-x-twitter fa-lg"></i>
-          </a>
-          <a href="" class="me-4 link-secondary">
-            <i class="fa-brands fa-instagram fa-lg"></i>
-          </a>
-          <a href="" class="me-4 link-secondary">
-            <i class="fa-brands fa-youtube fa-lg"></i>
-          </a>
-        </div>
-      </section>
-
-      <section>
-        <div class="container text-center text-md-start mt-5">
-          <div class="row mt-3">
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold mb-4 orange-text">
-                <i class="fa-solid fa-motorcycle me-3 text-white"></i>Motosmi.id
-              </h6>
-              <p>
-                Motosmi is your premium destination for top-tier motorcycle gear and accessories. Our carefully curated
-                collection ensures quality and style for every rider. Shop with us and elevate your riding experience to
-                the next level.
-              </p>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold mb-4 orange-text">Products</h6>
-              <p><a href="products/index.html?brand=Suzuki" class="text-reset">Suzuki</a></p>
-              <p><a href="products/index.html?brand=Kawasaki" class="text-reset">Kawasaki</a></p>
-              <p><a href="products/index.html?brand=Honda" class="text-reset">Honda</a></p>
-              <p><a href="products/index.html?brand=Yamaha" class="text-reset">Yamaha</a></p>
-            </div>
-
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold mb-4 orange-text">Useful links</h6>
-              <p><a href="/" class="text-reset">Home</a></p>
-              <p><a href="products" class="text-reset">Products</a></p>
-              <p><a href="faq" class="text-reset">FAQ</a></p>
-              <p><a href="#!" class="text-reset">Contact</a></p>
-            </div>
-
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <h6 class="text-uppercase fw-bold mb-4 orange-text">Contact</h6>
-              <p><i class="fa-solid me-3 text-secondary fa-warehouse"></i>Astana, 010017, Kazakhstan</p>
-              <p id="email-footer" class="cursor-pointer" title="Click to copy">
-                <i class="fas fa-envelope me-3 text-secondary"></i>elnur.kazakhstan@gmail.com
-              </p>
-              <p id="phone1" class="cursor-pointer" title="Click to copy">
-                <i class="fas fa-phone me-3 text-secondary"></i>+7 (701) 513 01 53 | Yelnur, Founder
-              </p>
-              <p id="phone2" class="cursor-pointer" title="Click to copy">
-                <i class="fas fa-print me-3 text-secondary"></i>+7 (702) 146 42 80 | Aslan, CEO
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025)">
-        ©&nbsp;2023-2024&nbsp;Copyright&nbsp;|&nbsp;All rights reserved
-        <a class="text-reset fw-bold" href="https://prenl.github.io/">Motosmi.id</a>
-      </div>
-    </footer>
-
-    <button class="btn btn-primary btn-lg" id="scrollTopBtn" style="position: fixed; bottom: 10px; right: 10px">
-      ↑ On Top
-    </button>
-
-    <script src="https://kit.fontawesome.com/05d935ae9b.js" crossorigin="anonymous"></script>
-    <script src="./assets/js/form-upload.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./assets/js/copy.js"></script>
-    <script src="./assets/js/top-button.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  </body>
+        <script src="./assets/js/countdown.js"></script>
+        <script src="https://kit.fontawesome.com/05d935ae9b.js" crossorigin="anonymous"></script>
+        <script src="./assets/js/form-upload.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./assets/js/copy.js"></script>
+        <script src="./assets/js/top-button.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </body>
 </html>
