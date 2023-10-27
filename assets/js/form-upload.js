@@ -30,16 +30,6 @@ document.getElementById("form").addEventListener("submit", function (event) {
         return;
     }
 
-    if (!validateEmail(data.email)) {
-        Swal.fire({
-            title: "Something went wrong",
-            text: "Email is not valid!",
-            icon: "error",
-            confirmButtonText: "Ok",
-        });
-        return;
-    }
-
     if (!validatePhone(data.phone)) {
         Swal.fire({
             title: "Something went wrong",
