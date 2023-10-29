@@ -27,15 +27,13 @@
                 <div class="container d-flex flex-wrap">
                     <ul class="nav me-auto">
                         <li class="nav-item">
-                            <a href="../index.html" class="nav-link link-light px-2 mr-3rem" aria-current="page"
-                                >Home</a
-                            >
+                            <a href="../" class="nav-link link-light px-2 mr-3rem" aria-current="page">Home</a>
                         </li>
                         <li class="nav-item">
                             <a href="../products" class="nav-link link-light px-2 mr-3rem">Products</a>
                         </li>
-                        <li class="nav-item"><a href="/" class="nav-link link-light px-2 mr-3rem">FAQ</a></li>
-                        <li class="nav-item"><a href="../cart" class="nav-link link-light px-2 mr-3rem">Cart</a></li>
+                        <li class="nav-item"><a href="../faq" class="nav-link link-light px-2 mr-3rem">FAQ</a></li>
+                        <li class="nav-item"><a href="/" class="nav-link link-light px-2 mr-3rem">Cart</a></li>
                         <li class="nav-item"><a href="../login" class="nav-link link-light px-1">Profile</a></li>
                     </ul>
                     <ul class="nav">
@@ -79,73 +77,88 @@
             </header>
         </section>
 
-        <section class="mt-5">
-            <div class="container">
-                <h3 class="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3>
-                <p class="text-center mb-5">Find the answers for the most frequently asked questions below</p>
+        <section class="h-100 h-custom" style="background-color: #d2c9ff">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12">
+                        <div class="card card-registration card-registration-2" style="border-radius: 15px">
+                            <div class="card-body p-0">
+                                <div class="row g-0">
+                                    <div class="col-lg-8">
+                                        <div class="p-5">
+                                            <div class="d-flex justify-content-between align-items-center mb-5">
+                                                <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
+                                                <h6 class="mb-0 text-muted" id="howitems">3 items</h6>
+                                            </div>
+                                            <hr class="my-4" />
 
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
-                        <h6 class="mb-3 text-primary fs-4">
-                            <i class="far fa-paper-plane text-primary pe-2"></i>Is there any delivery?
-                        </h6>
-                        <p class="fs-6">
-                            <strong>Absolutely!</strong> We work with top delivery companies such as DHL, FedEX and
-                            others. Contact us to get more information and price plan for delivery.
-                        </p>
-                    </div>
+                                            <div id="cart"></div>
 
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
-                        <h6 class="mb-3 text-primary fs-4">
-                            <i class="fas fa-pen-alt text-primary pe-2"></i>Do you offer a warranty?
-                        </h6>
-                        <p class="fs-6">
-                            <strong>Yes</strong>, all of our motorcycles come with a manufacturer's warranty, which
-                            typically covers any defects in materials or workmanship for a specified period.
-                        </p>
-                    </div>
+                                            <div class="pt-5">
+                                                <h6 class="mb-0">
+                                                    <a href="../products" class="text-body"
+                                                        ><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a
+                                                    >
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 bg-grey">
+                                        <div class="p-5">
+                                            <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                                            <hr class="my-4" />
 
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
-                        <h6 class="mb-3 text-primary fs-4">
-                            <i class="fas fa-user text-primary pe-2"></i>Can I test ride a motorcycle?
-                        </h6>
-                        <p class="fs-6">
-                            <strong>Absolutely!</strong> We encourage customers to test ride before making a purchase to
-                            ensure they are comfortable with their choice. However, you'll need to provide a valid
-                            motorcycle license, and we might ask for a deposit.
-                        </p>
-                    </div>
+                                            <div class="d-flex justify-content-between mb-4">
+                                                <h5 id="cart-items" class="text-uppercase">Items 3</h5>
+                                                <h5 id="cart-total">$ 0</h5>
+                                            </div>
 
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
-                        <h6 class="mb-3 text-primary fs-4">
-                            <i class="fas fa-rocket text-primary pe-2"></i>Do you offer financing options?
-                        </h6>
-                        <p class="fs-6">
-                            Yes, we do offer financing options for qualified buyers. We work with multiple financing
-                            institutions to provide our customers with competitive rates and flexible payment plans.
-                            Please speak with our finance department to discuss your needs and get more information.
-                        </p>
-                    </div>
+                                            <h5 class="text-uppercase mb-3">Shipping</h5>
 
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
-                        <h6 class="mb-3 text-primary fs-4">
-                            <i class="fas fa-home text-primary pe-2"></i>Can I trade in my old motorcycle?
-                        </h6>
-                        <p class="fs-6">
-                            <strong>Unfortunately no.</strong> We do not accept any trade-ins. But we do have refund in
-                            14 days if new motorcycle won't fit you.
-                        </p>
-                    </div>
+                                            <div class="mb-4 pb-2">
+                                                <select class="select">
+                                                    <option value="1">DHL Express</option>
+                                                    <option value="2">UPS</option>
+                                                    <option value="3">FedEx</option>
+                                                    <option value="4">Pickup</option>
+                                                </select>
+                                            </div>
 
-                    <div class="col-12 col-md-6 col-lg-4 mb-4 p-3">
-                        <h6 class="mb-3 text-primary fs-4">
-                            <i class="fas fa-book-open text-primary pe-2"></i>Do you carry accessories and parts?
-                        </h6>
-                        <p class="fs-6">
-                            Yes, we have a wide range of accessories, apparel, and spare parts to cater to your
-                            motorcycle needs. If there's something specific you're looking for and can't find it in our
-                            store, let us know, and we'll do our best to order it for you.
-                        </p>
+                                            <h5 class="text-uppercase mb-3">Give code</h5>
+
+                                            <div class="mb-5">
+                                                <div class="form-outline">
+                                                    <input
+                                                        type="text"
+                                                        id="form3Examplea2"
+                                                        class="form-control form-control-lg"
+                                                    />
+                                                    <label class="form-label" for="form3Examplea2"
+                                                        >Enter your code</label
+                                                    >
+                                                </div>
+                                            </div>
+
+                                            <hr class="my-4" />
+
+                                            <div class="d-flex justify-content-between mb-5">
+                                                <h5 class="text-uppercase">Total price</h5>
+                                                <h5 id="cart-total2"></h5>
+                                            </div>
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-dark btn-block btn-lg"
+                                                data-mdb-ripple-color="dark"
+                                                onclick="registerCart()"
+                                            >
+                                                Register
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -226,5 +239,10 @@
 
         <script src="https://kit.fontawesome.com/05d935ae9b.js" crossorigin="anonymous"></script>
         <script src="../assets/js/copy.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../assets/js/cart-gen.js"></script>
+        <script>
+            parseCart();
+        </script>
     </body>
 </html>

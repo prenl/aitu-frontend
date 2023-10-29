@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Nunito&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../assets/csss/styles.css" />
+        <title>Login - Motosmi.id</title>
+    </head>
+    <body class="">
+        <section class="w-100 bg-dark" style="padding-bottom: 10px">
+            <nav class="py-2 border-bottom">
+                <div class="container d-flex flex-wrap">
+                    <ul class="nav me-auto">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link link-light px-2 mr-3rem" aria-current="page"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a href="../products" class="nav-link link-light px-2 mr-3rem">Products</a>
+                        </li>
+                        <li class="nav-item"><a href="../faq" class="nav-link link-light px-2 mr-3rem">FAQ</a></li>
+                        <li class="nav-item"><a href="../cart" class="nav-link link-light px-2 mr-3rem">Cart</a></li>
+                        <li class="nav-item"><a href="/" class="nav-link link-light px-1">Profile</a></li>
+                    </ul>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-light px-2">
+                                <i class="fa-brands fa-threads fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-light px-2">
+                                <i class="fa-brands fa-x-twitter fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-light px-2">
+                                <i class="fa-brands fa-instagram fa-lg"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link link-light px-2">
+                                <i class="fa-brands fa-youtube fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <header class="py-3 mb-4">
+                <div class="container d-flex flex-wrap justify-content-center">
+                    <a
+                        href="/"
+                        class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-light text-decoration-none"
+                        style="margin-left: 8px"
+                    >
+                        <img src="../assets/images/logo.png" style="width: 180px" />
+                    </a>
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0">
+                        <input type="search" class="form-control" placeholder="Search..." aria-label="Search" />
+                    </form>
+                </div>
+            </header>
+        </section>
+
+        <div style="max-width: 375px; margin: 0 auto" class="bg-dark p-4 rounded my-5">
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                    <!-- <form> -->
+                    <div class="text-center mb-3">
+                        <p class="text-light fs-2">Sign in</p>
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-facebook-f fa-xl text-light"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-google fa-xl text-light"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-twitter fa-xl text-light"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                            <i class="fab fa-github fa-xl text-light"></i>
+                        </button>
+                    </div>
+
+                    <p class="text-center text-light fs-2">or</p>
+
+                    <div class="form-outline mb-4">
+                        <input type="email" id="loginName" class="form-control" />
+                        <label class="form-label text-light" for="loginName">Email or username</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <input type="password" id="loginPassword" class="form-control" />
+                        <label class="form-label text-light" for="loginPassword">Password</label>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <div class="form-check mb-3 mb-md-0">
+                                <input class="form-check-input" type="checkbox" value="" id="loginCheck" />
+                                <label class="form-check-label text-light" for="loginCheck">Remember me </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex justify-content-center">
+                            <a href="/">Forgot password?</a>
+                        </div>
+                    </div>
+                    <button id="login" class="btn btn-primary px-4 col-12">Sign in</button>
+                    <!-- </form> -->
+                    <br />
+                    <span class="text-light">Still don't have an account? <a href="../register">Register now</a></span>
+                </div>
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/05d935ae9b.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginName = document.getElementById("loginName");
+                const loginPassword = document.getElementById("loginPassword");
+
+                loginName.addEventListener("input", validateEmail);
+                loginPassword.addEventListener("input", validatePassword);
+
+                function validateEmail() {
+                    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                    if (!emailPattern.test(loginName.value)) {
+                        loginName.setCustomValidity("Invalid email format");
+                        loginName.style.border = "3px solid red";
+                    } else {
+                        loginName.setCustomValidity("");
+                        loginName.style.border = "3px solid blue";
+                    }
+                }
+
+                function validatePassword() {
+                    if (loginPassword.value.length < 8) {
+                        loginPassword.setCustomValidity("Password should be at least 8 characters long");
+                        loginPassword.style.border = "3px solid red";
+                    } else {
+                        loginPassword.setCustomValidity("");
+                        loginPassword.style.border = "3px solid blue";
+                    }
+                }
+            });
+
+            const loginButton = document.getElementById("login");
+
+            loginButton.addEventListener("click", function () {
+                Swal.fire({
+                    title: "Something went wrong",
+                    text: "Motosmi API is currently unavailable!",
+                    icon: "error",
+                    confirmButtonText: "Ok",
+                });
+            });
+        </script>
+    </body>
+</html>

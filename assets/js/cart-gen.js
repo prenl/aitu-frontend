@@ -1,4 +1,69 @@
-const products = [
+function countProductOccurences(productId) {
+    const bag = JSON.parse(localStorage.getItem("bag"));
+    return bag.filter((id) => id === productId).length;
+}
+
+function addToBag(product_id) {
+    if (!localStorage.getItem("bag")) {
+        localStorage.setItem("bag", JSON.stringify([]));
+    }
+
+    let bag = JSON.parse(localStorage.getItem("bag"));
+    bag.push(product_id);
+    localStorage.setItem("bag", JSON.stringify(bag));
+    parseCart();
+}
+
+function removeFromBag(productId) {
+    let bag = JSON.parse(localStorage.getItem("bag"));
+    const index = bag.indexOf(parseInt(productId));
+    bag.splice(index, 1);
+    localStorage.setItem("bag", JSON.stringify(bag));
+    parseCart();
+}
+
+function generateCartProduct(productId) {
+    let product;
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].id === parseInt(productId)) {
+            product = products[i];
+            break;
+        }
+    }
+
+    if (!product) return;
+
+    let amount = countProductOccurences(product.id);
+
+    return `<div class="row mb-4 d-flex justify-content-between align-items-center">
+        <div class="col-md-2 col-lg-2 col-xl-2">
+            <img src="${product.image[0]}" class="img-fluid rounded-3" alt="Cotton T-shirt">
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3">
+            <h6 class="text-muted">${product.brand}</h6>
+            <h6 class="text-black mb-0">${product.model}</h6>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+            <button class="btn btn-link px-2" onclick="removeFromBag(${product.id})">
+                <i class="fas fa-minus" aria-hidden="true"></i>
+            </button>
+
+            <input id="form1" min="0" name="quantity" value="${amount}" type="number" class="form-control form-control-sm">
+
+            <button class="btn btn-link px-2" onclick="addToBag(${product.id})">
+                <i class="fas fa-plus" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+            <h6 class="mb-0">$${product.price * amount}</h6>
+        </div>
+        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+            <a href="#!" class="text-muted"><i class="fas fa-times" aria-hidden="true"></i></a>
+        </div>
+    </div><hr class="my-4" />`;
+}
+
+let products = [
     {
         id: 1,
         brand: "Kawasaki",
@@ -157,136 +222,36 @@ const products = [
     },
 ];
 
-function getURLParameter(name) {
-    return new URLSearchParams(window.location.search).get(name);
-}
+function getCartTotalPrice(bag) {
+    let total = 0;
 
-function generateProductHTML(product) {
-    return `
-        <div class="col-12 col-md-6 mb-5" style="font-family: 'Nunito';">
-        <div class="d-flex bg-white product-card mx-auto">
-            <div id="productCarousel${product.brand}${
-        product.model
-    }" class="carousel slide me-4 product-image" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="${product.image[0]}" alt="${
-        product.model
-    }" class="w-100 h-100 object-fit-cover" loading="lazy" />
-                    </div>
-                    <div class="carousel-item">
-                        <img src="${product.image[1]}" alt="${
-        product.model
-    }" class="w-100 h-100 object-fit-cover" loading="lazy" />
-                    </div>
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel${product.brand}${
-        product.model
-    }" data-bs-slide="prev">
-                    <i class="fas fa-chevron-left"></i>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel${product.brand}${
-        product.model
-    }" data-bs-slide="next">
-                    <i class="fas fa-chevron-right"></i>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-            <form class="flex-fill ps-4">
-                <div class="d-flex justify-content-between align-items-start">
-                    <h1 class="text-lg fw-semibold text-slate-900 mb-2 mt-3">
-                        ${product.brand} ${product.model}
-                    </h1>
-                    <div class="fs-5 fw-bold mt-4" style="padding-right: 20px; color: #657786;">
-                        $${product.price}
-                    </div>
-                </div>
-                <div class="text-sm fw-medium text-slate-700 my-2">
-                    ${product.availability}
-                </div>
-                <div class="d-flex align-items-center my-4 pb-2">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        ${product.options
-                            .map(
-                                (option) => `
-                        <label class="btn btn-outline-secondary">
-                        <input type="radio" name="size" value="${option}" autocomplete="off" required> ${option}&nbsp;
-                        </label>
-                        `
-                            )
-                            .join("")}
-                    </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                    <button class="btn btn-dark me-2" type="submit">
-                    Buy now
-                    </button>
-                    <button class="btn btn-outline-dark me-2" type="button" data-product-id="${product.id}">
-                        Add to cart
-                    </button>
-                    <button class="btn btn-outline-secondary" type="button" aria-label="Like" id="like">
-                        <i class="fas fa-heart"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-    `;
-}
-
-function parseBrands() {
-    document.getElementById("products").innerHTML = "";
-    const brand = getURLParameter("brand");
-
-    if (brand) {
-        const filteredProducts = products.filter((product) => product.brand === brand);
-
-        if (filteredProducts.length < 1) {
-            Swal.fire({
-                title: "Not found",
-                text: `Looks like we don't have any motorcycles from ${brand}`,
-                icon: "error",
-                confirmButtonText: "Got it!",
-            }).then((result) => {
-                window.location.replace(`https://prenl.github.io/products`);
-            });
-        }
-
-        document.getElementById("products").innerHTML = filteredProducts.map(generateProductHTML).join("");
-    } else {
-        document.getElementById("products").innerHTML = products.map(generateProductHTML).join("");
+    for (i = 0; i < bag.length; i++) {
+        total += parseInt(products.find((product) => (product.id = bag[i])).price);
     }
+
+    return total;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const addToBagButtons = document.querySelectorAll("[data-product-id]");
-
-    addToBagButtons.forEach((button) => {
-        button.addEventListener("click", function (event) {
-            const productId = event.target.getAttribute("data-product-id");
-            addToBag(productId);
-            Swal.fire({
-                title: "Success",
-                text: `The motorcycle was added to your cart!`,
-                icon: "success",
-                confirmButtonText: "Got it!",
-            });
-        });
+function registerCart() {
+    Swal.fire({
+        title: "Done!",
+        text: "Your order has been sent!",
+        icon: "success",
+        confirmButtonText: "Ok",
+    }).then(function (isConfirm) {
+        if (isConfirm) window.location.href = "http://127.0.0.1:5500";
     });
-});
-
-function addToBag(product_id) {
-    if (!localStorage.getItem("bag")) {
-        localStorage.setItem("bag", JSON.stringify([]));
-    }
-
-    let bag = JSON.parse(localStorage.getItem("bag"));
-    bag.push(parseInt(product_id));
-    localStorage.setItem("bag", JSON.stringify(bag));
+    localStorage.setItem("bag", JSON.stringify([]));
 }
 
-function getBag() {
-    return JSON.parse(localStorage.getItem("bag"));
+function parseCart() {
+    let bag = JSON.parse(localStorage.getItem("bag"));
+    let amount = bag.length;
+    let cartTotal = getCartTotalPrice(bag);
+    bag = Array.from(new Set(bag));
+    document.getElementById("cart").innerHTML = bag.map(generateCartProduct).join("");
+    document.getElementById("cart-items").innerHTML = "ITEMS " + amount;
+    document.getElementById("howitems").innerHTML = amount + " items";
+    document.getElementById("cart-total").innerHTML = "$" + cartTotal;
+    document.getElementById("cart-total2").innerHTML = "$" + cartTotal;
 }
