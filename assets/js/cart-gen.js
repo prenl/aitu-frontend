@@ -239,7 +239,7 @@ function registerCart() {
         icon: "success",
         confirmButtonText: "Ok",
     }).then(function (isConfirm) {
-        if (isConfirm) window.location.href = "http://127.0.0.1:5500";
+        if (isConfirm) window.location.href = "httpы://prenl.github.io/products";
     });
     localStorage.setItem("bag", JSON.stringify([]));
 }
