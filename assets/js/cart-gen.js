@@ -1,69 +1,4 @@
-function countProductOccurences(productId) {
-    const bag = JSON.parse(localStorage.getItem("bag"));
-    return bag.filter((id) => id === productId).length;
-}
-
-function addToBag(product_id) {
-    if (!localStorage.getItem("bag")) {
-        localStorage.setItem("bag", JSON.stringify([]));
-    }
-
-    let bag = JSON.parse(localStorage.getItem("bag"));
-    bag.push(product_id);
-    localStorage.setItem("bag", JSON.stringify(bag));
-    parseCart();
-}
-
-function removeFromBag(productId) {
-    let bag = JSON.parse(localStorage.getItem("bag"));
-    const index = bag.indexOf(parseInt(productId));
-    bag.splice(index, 1);
-    localStorage.setItem("bag", JSON.stringify(bag));
-    parseCart();
-}
-
-function generateCartProduct(productId) {
-    let product;
-    for (let i = 0; i < products.length; i++) {
-        if (products[i].id === parseInt(productId)) {
-            product = products[i];
-            break;
-        }
-    }
-
-    if (!product) return;
-
-    let amount = countProductOccurences(product.id);
-
-    return `<div class="row mb-4 d-flex justify-content-between align-items-center">
-        <div class="col-md-2 col-lg-2 col-xl-2">
-            <img src="${product.image[0]}" class="img-fluid rounded-3" alt="Cotton T-shirt">
-        </div>
-        <div class="col-md-3 col-lg-3 col-xl-3">
-            <h6 class="text-muted">${product.brand}</h6>
-            <h6 class="text-black mb-0">${product.model}</h6>
-        </div>
-        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-            <button class="btn btn-link px-2" onclick="removeFromBag(${product.id})">
-                <i class="fas fa-minus" aria-hidden="true"></i>
-            </button>
-
-            <input id="form1" min="0" name="quantity" value="${amount}" type="number" class="form-control form-control-sm">
-
-            <button class="btn btn-link px-2" onclick="addToBag(${product.id})">
-                <i class="fas fa-plus" aria-hidden="true"></i>
-            </button>
-        </div>
-        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-            <h6 class="mb-0">$${product.price * amount}</h6>
-        </div>
-        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-            <a href="#!" class="text-muted"><i class="fas fa-times" aria-hidden="true"></i></a>
-        </div>
-    </div><hr class="my-4" />`;
-}
-
-let products = [
+const products = [
     {
         id: 1,
         brand: "Kawasaki",
@@ -222,17 +157,96 @@ let products = [
     },
 ];
 
+function countProductOccurences(productId) {
+    const bag = JSON.parse(localStorage.getItem("bag"));
+    return bag.filter((id) => id === productId).length;
+}
+
+function addToBag(product_id) {
+    if (!localStorage.getItem("bag")) {
+        localStorage.setItem("bag", JSON.stringify([]));
+    }
+
+    let bag = JSON.parse(localStorage.getItem("bag"));
+    bag.push(product_id);
+    localStorage.setItem("bag", JSON.stringify(bag));
+    parseCart();
+}
+
+function removeFromBag(productId) {
+    let bag = JSON.parse(localStorage.getItem("bag"));
+    const index = bag.indexOf(parseInt(productId));
+    bag.splice(index, 1);
+    localStorage.setItem("bag", JSON.stringify(bag));
+    parseCart();
+}
+
+function generateCartProduct(productId) {
+    let product;
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].id === parseInt(productId)) {
+            product = products[i];
+            break;
+        }
+    }
+
+    console.log(product);
+
+    if (!product) return;
+
+    let amount = countProductOccurences(product.id);
+
+    return `<div class="row mb-4 d-flex justify-content-between align-items-center">
+        <div class="col-md-2 col-lg-2 col-xl-2">
+            <img src="${product.image[0]}" class="img-fluid rounded-3">
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-3">
+            <h6 class="text-muted">${product.brand}</h6>
+            <h6 class="text-black mb-0">${product.model}</h6>
+        </div>
+        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+            <button class="btn btn-link px-2" onclick="removeFromBag(${product.id})">
+                <i class="fas fa-minus" aria-hidden="true"></i>
+            </button>
+
+            <input id="form1" min="0" name="quantity" value="${amount}" type="number" class="form-control form-control-sm">
+
+            <button class="btn btn-link px-2" onclick="addToBag(${product.id})">
+                <i class="fas fa-plus" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+            <h6 class="mb-0">$${product.price * amount}</h6>
+        </div>
+        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+            <a href="#!" class="text-muted"><i class="fas fa-times" aria-hidden="true"></i></a>
+        </div>
+    </div><hr class="my-4" />`;
+}
+
 function getCartTotalPrice(bag) {
     let total = 0;
 
     for (i = 0; i < bag.length; i++) {
-        total += parseInt(products.find((product) => (product.id = bag[i])).price);
+        total += parseInt(products.find((product) => product.id == bag[i]).price);
     }
 
     return total;
 }
 
 function registerCart() {
+    let bag = JSON.parse(localStorage.getItem("bag"));
+
+    if (bag.length < 1) {
+        Swal.fire({
+            title: "Error!",
+            text: "There is no any item in your bag",
+            icon: "error",
+            confirmButtonText: "Ok",
+        });
+        return;
+    }
+
     Swal.fire({
         title: "Done!",
         text: "Your order has been sent!",
