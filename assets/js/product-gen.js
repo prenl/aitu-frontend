@@ -40,10 +40,7 @@ const products = [
         brand: "Suzuki",
         model: "SV650",
         price: "7199.00",
-        image: [
-            "https://5koleso.ru/wp-content/uploads/2020/03/kkk04748-1-1024x683.jpg",
-            "https://5koleso.ru/wp-content/uploads/2020/03/kkk04748-1-1024x683.jpg",
-        ],
+        image: ["https://5koleso.ru/wp-content/uploads/2020/03/kkk04748-1-1024x683.jpg", "https://5koleso.ru/wp-content/uploads/2020/03/kkk04748-1-1024x683.jpg"],
         availability: "In stock",
         options: ["SV650", "SV650A", "SV650X"],
     },
@@ -52,10 +49,7 @@ const products = [
         brand: "Suzuki",
         model: "V-Strom",
         price: "8299.00",
-        image: [
-            "https://ireland.apollo.olxcdn.com/v1/files/l5u62wqs5g0e3-PL/image;s=1813x1360",
-            "https://ireland.apollo.olxcdn.com/v1/files/l5u62wqs5g0e3-PL/image;s=1813x1360",
-        ],
+        image: ["https://ireland.apollo.olxcdn.com/v1/files/l5u62wqs5g0e3-PL/image;s=1813x1360", "https://ireland.apollo.olxcdn.com/v1/files/l5u62wqs5g0e3-PL/image;s=1813x1360"],
         availability: "In stock",
         options: ["650", "1000"],
     },
@@ -100,10 +94,7 @@ const products = [
         brand: "Kawasaki",
         model: "Z",
         price: "7999.00",
-        image: [
-            "https://www.motorbeam.com/wp-content/uploads/2014-Kawasaki-Z1000-Handling.jpg",
-            "https://www.motorbeam.com/wp-content/uploads/2014-Kawasaki-Z1000-Handling.jpg",
-        ],
+        image: ["https://www.motorbeam.com/wp-content/uploads/2014-Kawasaki-Z1000-Handling.jpg", "https://www.motorbeam.com/wp-content/uploads/2014-Kawasaki-Z1000-Handling.jpg"],
         availability: "In stock",
         options: ["Z400", "Z650", "Z900", "Z1000"],
     },
@@ -112,10 +103,7 @@ const products = [
         brand: "Kawasaki",
         model: "Versys",
         price: "8299.00",
-        image: [
-            "https://http2.mlstatic.com/D_NQ_NP_629655-MCO69890209134_062023-O.webp",
-            "https://http2.mlstatic.com/D_NQ_NP_629655-MCO69890209134_062023-O.webp",
-        ],
+        image: ["https://http2.mlstatic.com/D_NQ_NP_629655-MCO69890209134_062023-O.webp", "https://http2.mlstatic.com/D_NQ_NP_629655-MCO69890209134_062023-O.webp"],
         availability: "In stock",
         options: ["650", "1000"],
     },
@@ -148,10 +136,7 @@ const products = [
         brand: "Honda",
         model: "Rebel",
         price: "5999.00",
-        image: [
-            "https://i.ebayimg.com/images/g/kqUAAOSwWDZhoIlC/s-l1200.jpg",
-            "https://i.ebayimg.com/images/g/kqUAAOSwWDZhoIlC/s-l1200.jpg",
-        ],
+        image: ["https://i.ebayimg.com/images/g/kqUAAOSwWDZhoIlC/s-l1200.jpg", "https://i.ebayimg.com/images/g/kqUAAOSwWDZhoIlC/s-l1200.jpg"],
         availability: "In stock",
         options: ["300", "500", "1100"],
     },
@@ -165,31 +150,21 @@ function generateProductHTML(product) {
     return `
         <div class="col-12 col-md-6 mb-5" style="font-family: 'Nunito';">
         <div class="d-flex bg-white product-card mx-auto">
-            <div id="productCarousel${product.brand}${
-        product.model
-    }" class="carousel slide me-4 product-image" data-bs-ride="carousel">
+            <div id="productCarousel${product.brand}${product.model}" class="carousel slide me-4 product-image" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="${product.image[0]}" alt="${
-        product.model
-    }" class="w-100 h-100 object-fit-cover" loading="lazy" />
+                        <img src="${product.image[0]}" alt="${product.model}" class="w-100 h-100 object-fit-cover" loading="lazy" />
                     </div>
                     <div class="carousel-item">
-                        <img src="${product.image[1]}" alt="${
-        product.model
-    }" class="w-100 h-100 object-fit-cover" loading="lazy" />
+                        <img src="${product.image[1]}" alt="${product.model}" class="w-100 h-100 object-fit-cover" loading="lazy" />
                     </div>
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel${product.brand}${
-        product.model
-    }" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel${product.brand}${product.model}" data-bs-slide="prev">
                     <i class="fas fa-chevron-left"></i>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel${product.brand}${
-        product.model
-    }" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel${product.brand}${product.model}" data-bs-slide="next">
                     <i class="fas fa-chevron-right"></i>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -236,12 +211,30 @@ function generateProductHTML(product) {
     `;
 }
 
+function initProducts() {
+    let storageProducts = JSON.parse(localStorage.getItem("products"));
+
+    if (!storageProducts) {
+        localStorage.setItem("products", JSON.stringify(products));
+        return;
+    }
+
+    if (storageProducts.length > 10) {
+        localStorage.setItem("products", JSON.stringify(products));
+    }
+}
+
 function parseBrands() {
-    document.getElementById("products").innerHTML = "";
+    let someproducts = JSON.parse(localStorage.getItem("products"));
+
+    if (someproducts.length < 10) {
+        console.log("здесь баг");
+    }
+
     const brand = getURLParameter("brand");
 
     if (brand) {
-        const filteredProducts = products.filter((product) => product.brand === brand);
+        const filteredProducts = someproducts.filter((product) => product.brand === brand);
 
         if (filteredProducts.length < 1) {
             Swal.fire({
@@ -256,7 +249,7 @@ function parseBrands() {
 
         document.getElementById("products").innerHTML = filteredProducts.map(generateProductHTML).join("");
     } else {
-        document.getElementById("products").innerHTML = products.map(generateProductHTML).join("");
+        document.getElementById("products").innerHTML = someproducts.map(generateProductHTML).join("");
     }
 }
 
